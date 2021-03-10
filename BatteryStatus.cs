@@ -13,17 +13,17 @@ namespace BatteryManagementSystem
             TestBatteryCondition.CheckChargeRate(chargeRate);
         }
 
-        public static void DisplayBatteryStatus(string property, BatteryLevel.BatteryCondition batteryCondition)
+        public static void DisplayBatteryStatus(string property, BatteryCondition.BatteryLevel batteryLevel)
         {
             if (GermanLanguage)
             {
-                Console.WriteLine($"Batterie {property} ist {batteryCondition}");
+                Console.WriteLine($"Batterie {property} ist {batteryLevel}");
                 return;
             }
-            Console.WriteLine($"Battery {property} is {batteryCondition}");
+            Console.WriteLine($"Battery {property} is {batteryLevel}");
         }
 
-        public static void DisplayWarningMessage(BatteryLevel.Warnings warning)
+        public static void DisplayWarningMessage(BatteryCondition.Warnings warning)
         {
             if (GermanLanguage)
             {
