@@ -8,7 +8,7 @@ namespace BatteryManagementSystem
             float maxChargeRate = 0.8f;
 
             CheckBatteryLevel(chargeRate, minChargeRate, maxChargeRate);
-            BatteryLevel.BatteryCondition batteryChargeRate = BatteryLevel.CheckBatteryCondition(chargeRate, minChargeRate, maxChargeRate);
+            BatteryCondition.BatteryLevel batteryChargeRate = BatteryCondition.CheckBatteryCondition(chargeRate, minChargeRate, maxChargeRate);
             BatteryStatus.DisplayBatteryStatus("Charge Rate", batteryChargeRate);
         }
         
@@ -18,7 +18,7 @@ namespace BatteryManagementSystem
             float maxStateOfCharge = 80;
 
             CheckBatteryLevel(soc, minStateOfCharge, maxStateOfCharge);
-            BatteryLevel.BatteryCondition batteryChargeState = BatteryLevel.CheckBatteryCondition(soc, minStateOfCharge, maxStateOfCharge);
+            BatteryCondition.BatteryLevel batteryChargeState = BatteryCondition.CheckBatteryCondition(soc, minStateOfCharge, maxStateOfCharge);
             BatteryStatus.DisplayBatteryStatus("State of charge",batteryChargeState);
         }
 
@@ -28,7 +28,7 @@ namespace BatteryManagementSystem
             float maxTemperature = 45;
 
             CheckBatteryLevel(temperature, minTemperature, maxTemperature);
-            BatteryLevel.BatteryCondition batteryTemperature = BatteryLevel.CheckBatteryCondition(temperature, minTemperature, maxTemperature);
+            BatteryCondition.BatteryLevel batteryTemperature = BatteryCondition.CheckBatteryCondition(temperature, minTemperature, maxTemperature);
             BatteryStatus.DisplayBatteryStatus("Temperature", batteryTemperature);
         }
 
