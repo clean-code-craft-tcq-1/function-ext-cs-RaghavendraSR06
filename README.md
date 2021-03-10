@@ -57,3 +57,8 @@ Shorten the Semantic distance
 - Functional to express relation between input and output
 - Object oriented to encapsulate state with actions
 - Apect oriented to capture repeating aspects
+
+## Functional Extensions
+
+- Early Warning - Warning message has been given in English and German for users.
+- Support a language in addition to English - German language option added by setting in global variable.
