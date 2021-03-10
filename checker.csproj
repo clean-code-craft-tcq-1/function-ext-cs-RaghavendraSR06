@@ -3,7 +3,7 @@
     <Compile Include="checker.cs"/>
      <Compile Include="TestBatteryCondition.cs"/>
      <Compile Include="BatteryStatus.cs"/>
-     <Compile Include="BatteryLevel.cs"/>
+     <Compile Include="BatteryCondition.cs"/>
      <Compile Include="BatteryBreachLevel.cs"/>
   </ItemGroup>
   <Target Name="Build">
