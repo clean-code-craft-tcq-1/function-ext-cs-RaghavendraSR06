@@ -34,9 +34,9 @@ namespace BatteryManagementSystem
 
         public static void CheckBatteryLevel(float chargeValue, float minValue, float maxValue)
         {
-            float chargeLevel = BatteryChargeState.CalculateChargeLevel(chargeValue);
-            BatteryChargeState.CheckMinChargeState(chargeLevel, chargeValue, minValue);
-            BatteryChargeState.CheckMaxChargeState(chargeLevel, chargeValue, maxValue);
+            float chargeLevel = BatteryBreachLevel.CalculateBreachLevel(chargeValue);
+            BatteryBreachLevel.CheckMinBreachLevel(chargeLevel, chargeValue, minValue);
+            BatteryBreachLevel.CheckMaxBreachLevel(chargeLevel, chargeValue, maxValue);
         }
     }
 }
