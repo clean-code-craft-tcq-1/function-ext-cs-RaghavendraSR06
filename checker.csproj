@@ -1,6 +1,10 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Compile Include="checker.cs"/>
+     <Compile Include="TestBatteryCondition.cs"/>
+     <Compile Include="BatteryStatus.cs"/>
+     <Compile Include="BatteryLevel.cs"/>
+     <Compile Include="BatteryChargeState.cs"/>
   </ItemGroup>
   <Target Name="Build">
     <Csc Sources="@(Compile)"/>  
