@@ -1,13 +1,13 @@
 namespace BatteryManagementSystem
 {
-    class BatteryChargeState
+    class BatteryBreachLevel
     {
-        public static float CalculateChargeLevel(float chargeLevel)
+        public static float CalculateBreachLevel(float chargeLevel)
         {
             return (float)(0.05 * chargeLevel);
         }
 
-        public static void CheckMinChargeState(float chargeLevel, float chargeValue, float minValue)
+        public static void CheckMinBreachLevel(float chargeLevel, float chargeValue, float minValue)
         {
             float chargeRate = chargeLevel + minValue;
 
@@ -17,7 +17,7 @@ namespace BatteryManagementSystem
             }
         }
 
-        public static void CheckMaxChargeState(float chargeLevel, float chargeValue, float maxValue)
+        public static void CheckMaxBreachLevel(float chargeLevel, float chargeValue, float maxValue)
         {
             float chargeRate = maxValue - chargeLevel;
 
