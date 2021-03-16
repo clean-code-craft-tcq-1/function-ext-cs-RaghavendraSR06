@@ -13,7 +13,7 @@ namespace BatteryManagementSystem
 
             if (minValue <= chargeValue && chargeValue <= chargeRate)
             {
-                BatteryStatus.DisplayWarningMessage(BatteryCondition.Warnings.Discharge);
+                StatusMessages.DisplayWarningMessage(BatteryCondition.Warnings.Discharge);
             }
         }
 
@@ -23,9 +23,8 @@ namespace BatteryManagementSystem
 
             if (chargeValue <= maxValue && chargeRate <= maxValue)
             {
-                BatteryStatus.DisplayWarningMessage(BatteryCondition.Warnings.ChargePeak);
+                StatusMessages.DisplayWarningMessage(BatteryCondition.Warnings.ChargePeak);
             }
         }
     }
 }
-
