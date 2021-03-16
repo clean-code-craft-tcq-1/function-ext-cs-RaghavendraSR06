@@ -5,6 +5,9 @@
      <Compile Include="BatteryStatus.cs"/>
      <Compile Include="BatteryCondition.cs"/>
      <Compile Include="BatteryBreachLevel.cs"/>
+    <Compile Include="IReport.cs"/>
+    <Compile Include="ConsoleLogger.cs"/>
+    <Compile Include="DataBaseLogger.cs"/>
   </ItemGroup>
   <Target Name="Build">
     <Csc Sources="@(Compile)"/>  
