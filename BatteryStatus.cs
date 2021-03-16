@@ -2,19 +2,17 @@ using System;
 
 namespace BatteryManagementSystem
 {
-    class BatteryStatus
+    class StatusMessages
     {
         public static bool GermanLanguage = false;
-
-        public static void CheckBatteryStatus(float temperature, float soc, float chargeRate)
+        
+        public static void DisplayBatteryStatus(string property, BatteryCondition.BatteryLevel batteryLevel,IReport report)
         {
-            TestBatteryCondition.CheckTemperature(temperature);
-            TestBatteryCondition.CheckChargeState(soc);
-            TestBatteryCondition.CheckChargeRate(chargeRate);
-        }
+            if (batteryLevel == BatteryCondition.BatteryLevel.High || batteryLevel == BatteryCondition.BatteryLevel.Low)
+            {
+                report.Logger($"battery {property} threshold is {batteryLevel}");
+            }
 
-        public static void DisplayBatteryStatus(string property, BatteryCondition.BatteryLevel batteryLevel)
-        {
             if (GermanLanguage)
             {
                 Console.WriteLine($"Batterie {property} ist {batteryLevel}");
