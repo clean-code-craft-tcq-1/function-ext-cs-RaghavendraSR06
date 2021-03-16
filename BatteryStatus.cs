@@ -8,10 +8,7 @@ namespace BatteryManagementSystem
         
         public static void DisplayBatteryStatus(string property, BatteryCondition.BatteryLevel batteryLevel,IReport report)
         {
-            if (batteryLevel == BatteryCondition.BatteryLevel.High || batteryLevel == BatteryCondition.BatteryLevel.Low)
-            {
-                report.Logger($"battery {property} threshold is {batteryLevel}");
-            }
+            DisplayReport(property, batteryLevel, report);
 
             if (GermanLanguage)
             {
@@ -19,6 +16,14 @@ namespace BatteryManagementSystem
                 return;
             }
             Console.WriteLine($"Battery {property} is {batteryLevel}");
+        }
+
+        private static void DisplayReport(string property, BatteryCondition.BatteryLevel batteryLevel, IReport report)
+        {
+            if (batteryLevel == BatteryCondition.BatteryLevel.High || batteryLevel == BatteryCondition.BatteryLevel.Low)
+            {
+                report.Logger($"battery {property} threshold is {batteryLevel}");
+            }
         }
 
         public static void DisplayWarningMessage(BatteryCondition.Warnings warning)
